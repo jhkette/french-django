@@ -1,9 +1,16 @@
 from django.shortcuts import render
 
 # Create your views here.
+from vocabulary.models import Vocabulary
 
 def index(request):
-    return render(request, 'index.html')
+    vocabs = Vocabulary.objects.all()
+    context = {
+        'vocabs': vocabs
+    }
+    print(context)
+    # print(context.vocabs)
+    return render(request, 'index.html', context)
 
 
 def about(request):

@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{%block content%}
     <h1>Index page</h1>
-    
-</body>
-</html>
+    {% if vocabs %}
+        {% for v in vocabs %}
+            <h4>{{ v.word }}</h4>
+            <h4>{{ v.description }}</h4>
+        {%endfor%}
+    {% else %}
+    <div class="col-md-12">
+        <p>No Listings Available</p>
+    </div>
+    {% endif %}
+
+    {% endblock %}
