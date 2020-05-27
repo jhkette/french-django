@@ -1,5 +1,12 @@
-h4{
+.header{
+    display: block;
+    width: 100%;
+}
+h1{
     /* color: red; */
+    padding-bottom: .6rem;
+    border-bottom: 2px solid #2c2c2c;
+    display: inline-block;
 }
 
 .container{

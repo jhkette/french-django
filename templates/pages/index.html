@@ -1,7 +1,10 @@
 {% extends '../base.html' %}
 
 {%block content%}
+    <header class="header">
     <h1>Index page</h1>
+    </header>  
+
     {% if vocabs %}
         {% for v in vocabs %}
             <h4>{{ v.word }}</h4>
