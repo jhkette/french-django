@@ -1,14 +1,15 @@
-{% extends 'base.html' %}
+{% extends '../base.html' %}
 
 {%block content%}
     <h1>Index page</h1>
     {% if vocabs %}
         {% for v in vocabs %}
             <h4>{{ v.word }}</h4>
-            <h4>{{ v.description }}</h4>
+            <p class="em">{{ v.description }}</p>
             <a href="{% url 'vocabulary' v.id %}" 
-            class="btn btn-primary btn-block">More Info</a>
+            class="waves-effect waves-light btn">More Info</a>
         {%endfor%}
+       
        
     {% else %}
     <div class="col-md-12">

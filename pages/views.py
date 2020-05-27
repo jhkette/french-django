@@ -10,8 +10,8 @@ def index(request):
     }
     print(context)
     # print(context.vocabs)
-    return render(request, 'index.html', context)
+    return render(request, 'pages/index.html', context)
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'pages/about.html')
